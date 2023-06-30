@@ -14,9 +14,8 @@ input.onButtonPressed(Button.B, function () {
     } else {
         basic.showIcon(IconNames.Sad)
     }
-    for (let index = 0; index < 2; index++) {
-        basic.showNumber(score / 1000)
-    }
+    basic.pause(100)
+    basic.clearScreen()
 })
 let score = 0
 let elapsed = 0
