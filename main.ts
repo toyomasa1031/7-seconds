@@ -9,7 +9,7 @@ input.onButtonPressed(Button.B, function () {
         music.playSoundEffect(music.createSoundEffect(WaveShape.Triangle, 1886, 5000, 255, 255, 750, SoundExpressionEffect.Vibrato, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
         basic.showIcon(IconNames.Happy)
     } else if (score <= 500) {
-        music.startMelody(music.builtInMelody(Melodies.Ode), MelodyOptions.Once)
+        music.play(music.builtinPlayableSoundEffect(soundExpression.happy), music.PlaybackMode.UntilDone)
         basic.showIcon(IconNames.Heart)
     } else {
         basic.showIcon(IconNames.Sad)
