@@ -5,10 +5,10 @@ input.onButtonPressed(Button.A, function () {
 input.onButtonPressed(Button.B, function () {
     elapsed = input.runningTime() - start
     score = Math.abs(elapsed - 3000)
-    if (score < 200) {
+    if (score < 1000 && score > 500) {
         music.playSoundEffect(music.createSoundEffect(WaveShape.Triangle, 1886, 5000, 255, 255, 750, SoundExpressionEffect.Vibrato, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
         basic.showIcon(IconNames.Happy)
-    } else if (score == 0) {
+    } else if (score <= 500) {
         music.startMelody(music.builtInMelody(Melodies.Ode), MelodyOptions.Once)
         basic.showIcon(IconNames.Heart)
     } else {
